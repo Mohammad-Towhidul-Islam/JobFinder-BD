@@ -1,0 +1,186 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #0cabfa;
+  color: white;
+  width: 100%;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height: 30px; /* Ensures proper space for animation */
+}
+
+#movingTitle {
+  display: inline-block;
+  position: absolute;
+  animation: scrollTitle 10s linear infinite;
+}
+
+@keyframes scrollTitle {
+  0% { transform: translateX(100%); }
+  50% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Main Wrapper for images and content */
+.main-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin: 80px auto 0; /* Added margin to avoid overlap with navbar */
+}
+
+/* Side Images */
+.side-image {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.side-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Container for the form and results */
+.container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+  margin: 20px;
+}
+
+/* Heading */
+h1 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* Input container for search */
+.input-container {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Input and button styles */
+input {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  width: calc(100% - 24px);
+  margin-bottom: 10px;
+}
+
+button.btn {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #2980b9;
+}
+
+/* Job results section */
+.job-results {
+  margin-top: 30px;
+}
+
+.job-card {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-card a {
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.job-card a:hover {
+  text-decoration: underline;
+}
+
+/* Display job application info */
+.display-info {
+  font-size: 16px;
+  color: #2c3e50;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#showMoreBtn {
+  display: block;
+  margin-top: 20px;
+  background-color: #2ecc71;
+}
+
+#showMoreBtn:hover {
+  background-color: #27ae60;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .main-wrapper {
+      flex-direction: column;
+      align-items: center;
+  }
+  .side-image {
+      margin: 20px 0;
+      padding: 0;
+      flex: none;
+  }
+  .container {
+      width: 90%;
+      margin-top: 20px;
+  }
+}

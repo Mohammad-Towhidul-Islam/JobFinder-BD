@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar-title">
+            <span id="movingTitle">You Looking Job?</span>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <!-- Left Image -->
+        <div class="side-image left">
+            <img src="1.png" alt="Left Image">
+        </div>
+
+        <!-- Main Content -->
+        <div class="container">
+            <h1>Job Search</h1>
+
+            <!-- Job title input -->
+            <div class="input-container">
+                <input type="text" id="jobTitleInput" placeholder="Enter Job Title">
+                <button class="btn" onclick="searchJob()">Search Jobs</button>
+            </div>
+
+            <div id="jobResults" class="job-results"></div>
+
+            <!-- Show more jobs -->
+            <button id="showMoreBtn" class="btn" onclick="showMoreJobs()" style="display:none;">Show More Jobs</button>
+
+            <!-- LinkedIn connection input -->
+            <div class="input-container">
+                <input type="text" id="linkedinInput" placeholder="Enter your LinkedIn URL">
+            </div>
+
+            <!-- Apply Button -->
+            <button class="btn" onclick="applyJob()">Apply for Job</button>
+
+            <!-- Display job title and LinkedIn -->
+            <div id="jobTitleDisplay" class="display-info"></div>
+            <div id="linkedinDisplay" class="display-info"></div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="side-image right">
+            <img src="2.webp" alt="Right Image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
